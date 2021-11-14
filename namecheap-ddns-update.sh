@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 GLOBIGNORE="*"
 # for a domain you own hosted at namecheap, register one or more subdomains
 # to an IP address in namecheaps dynamicdns system
@@ -59,9 +59,9 @@ show_help() {
 cat << EOF
 
 Usage: ${0##*/} [-h] [-e] [-d DOMAIN] [-s SUBDOMAINS] [-i IP] [-t INTERVAL]
-Update the IP address of the bare domain and/or one or more subdomains, of a 
-domain you own at namecheap.com. This can only update an existing A record, it 
-cannot create a new A record. Use namecheap's advanced DNS settings for your 
+Update the IP address of the bare domain and/or one or more subdomains, of a
+domain you own at namecheap.com. This can only update an existing A record, it
+cannot create a new A record. Use namecheap's advanced DNS settings for your
 domain to create A records. The args d, s and i have corresponding ENV options.
 The Dynamice DNS Password has to be set with the NC_DDNS_PASS environment variable.
 You could also create an environment file in the same directory as the script,
@@ -71,7 +71,7 @@ not exist, then .namecheap-ddns-update sourced if found.
 
     -h             display this help and exit
     -e             exit if any call to update a subdomains IP address fails
-    -d DOMAIN      the domain that has a bare @ and/or one or more 
+    -d DOMAIN      the domain that has a bare @ and/or one or more
                    subdomain A records
     -s SUBDOMAINS  (optional) comma separated list of subdomains (A records) to update.
                    If not set only the bare domain will be updated.

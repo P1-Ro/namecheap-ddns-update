@@ -2,7 +2,7 @@ version: "3.7"
 services:
   namecheap-ddns:
     #build: .
-    image: joshuamorris3/namecheap-ddns-update
+    image: theglow6666/namecheap-ddns-update
     container_name: namecheap_ddns_updater
     restart: unless-stopped
     env_file: .env
