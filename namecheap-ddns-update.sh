@@ -6,9 +6,9 @@ GLOBIGNORE="*"
 if [ -r $(dirname "$0")/.env ]; then
   echo "Sourcing .env file at the same dir"
   source $(dirname "$0")/.env
-elif [ -r ~/.namecheap-ddns-update ]; then
+elif [ -r ~/.namecheap-ddns-update.sh ]; then
   echo "Sourcing user ($USER) .namecheap-ddns-update file"
-  source ~/.namecheap-ddns-update
+  source ~/.namecheap-ddns-update.sh
 fi
 
 update_ddns() {
